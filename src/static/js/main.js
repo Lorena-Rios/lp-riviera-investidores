@@ -86,3 +86,23 @@ const videos = document.querySelectorAll("video");
       menu.classList.toggle('hidden');
     });
   });
+  
+
+  // FUNÇÃO PARA ABRIR E FECHAR O MODAL
+function openModal(titulo, zap = false) {
+  var modal = document.querySelector(".modal");
+  modal.classList.remove("hidden");
+  modal.classList.add("flex");
+  modal.querySelector('[name="interesse"]').value = titulo;
+  modal.querySelector(".modal-title").innerHTML = titulo;
+  var form = modal.querySelector("form");
+  if (zap) {
+    form.setAttribute("data-zap", "sim");
+  } else {
+    form.removeAttribute("data-zap");
+  }
+}
+function closeModal() {
+  var modal = document.querySelector(".modal");
+  modal.classList.add("hidden");
+}
