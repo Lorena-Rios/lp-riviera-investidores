@@ -26,6 +26,27 @@
         height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <!-- End Google Tag Manager (noscript) -->
 
+        <!-- NAVBAR -->
+        <nav id="navbar" class="fixed top-0 w-full z-50 bg-white/60 backdrop-blur-sm transition duration-700 ease-in-out"
+          data-aos="fade-down"
+          data-aos-anchor="#section-invista"
+          data-aos-offset="200"
+          data-aos-duration="700"
+        >
+          <div class="max-w-none flex items-center justify-between px-8 py-3 md:px-16">
+            <!-- Logo -->
+            <a href="#" class="flex items-center">
+              <img src="./static/images/riviera_logo_nav.png" alt="Riviera" class="h-8 md:h-10 w-auto object-contain pointer-events-none" />
+            </a>
+            <!-- Links -->
+            <div class="flex space-x-6 md:space-x-12">
+              <a href="#section-localizacao" class="text-stone-800 text-xs md:text-sm tracking-wide hover:text-black transition">LOCALIZAÇÃO</a>
+              <a href="#" class="text-stone-800 text-xs md:text-sm tracking-wide hover:text-black transition">BAIXAR BOOK</a>
+              <a href="#" class="text-stone-800 text-xs md:text-sm tracking-wide hover:text-black transition">FALE COM UM CONSULTOR</a>
+            </div>
+          </div>
+        </nav>
+
         <!-- HERO SECTION -->
         <section class="relative overflow-hidden w-full h-[100vh]">
 
@@ -87,7 +108,7 @@
         </section>
 
         <!-- SEÇÃO INVISTA -->
-        <section class="mt-8 text-stone-700 font-normal lg:h-[90vh] overflow-hidden">
+        <section id="section-invista" class="mt-8 text-stone-700 font-normal lg:h-[90vh] overflow-hidden">
           <div class="grid lg:grid-cols-9 gap-6 h-full">
 
             <!-- BLOCO DE TEXTO -->
@@ -99,7 +120,8 @@
 
             >
               <h2 class="text-xl font-normal mb-2">INVISTA EM UM DOS ÚLTIMOS CONDOMÍNIOS PÉ NA AREIA DA REGIÃO!</h2>
-              <p class="mb-4 text-base max-w-prose">São terrenos entre 676,5 m² e 1.014 m², em uma das regiões mais valorizadas e desejadas do litoral baiano. Em um mercado onde escassez de terrenos bem localizados dita o ritmo dos preços, tem enorme potencial de valorização.</p>
+              <p class="mb-4 text-base max-w-prose">São terrenos entre 676,5 m² e 1.014 m², em uma das regiões mais valorizadas e desejadas do litoral baiano. 
+                <br>Em um mercado onde escassez de terrenos bem localizados dita o ritmo dos preços, tem enorme potencial de valorização.</p>
               <a href="#" class="text-base inline-block no-underline text-stone-700 hover:text-stone-900 bg-green-600 bg-opacity-40 hover:bg-opacity-55  py-2 px-6 text-center mt-8">BAIXAR BOOK</a>
             </div>
 
@@ -123,7 +145,19 @@
           data-aos-duration="700"
           data-aos-offset="200"
         >
-          <img src="./static/images/loteamento.png" alt="Loteamento" class="w-full lg:w-full h-auto lg:h-full object-contain" />
+          <!-- DESKTOP -->
+          <div class="mt-8 hidden lg:block">
+            <img src="./static/images/loteamento.png" alt="Loteamento" class="w-full mx-auto lg:w-[80vw] h-auto lg:h-full object-contain" />
+          </div>
+
+          <!-- MOBILE -->
+          <div class="block lg:hidden">
+            <img src="./static/images/loteamento_noText.png" alt="Loteamento" class="mt-8 w-full h-auto object-contain" />
+            <p class="mt-4 text-base text-center max-w-prose text-stone-600 italic">
+              Mais de 240 mil m² com apenas 140 lotes de 676,5m² e 1.014m², ao lado do Iberostar Praia do Forte.
+            </p>
+          </div>
+
 
         </section>
 
@@ -205,7 +239,7 @@
 
 
         <!-- SEÇÃO LOCALIZAÇÃO -->
-        <section class="text-stone-700 font-normal h-auto lg:h-[95vh] overflow-hidden relative">
+        <section id="section-localizacao" class="text-stone-700 font-normal h-auto lg:h-[95vh] overflow-hidden relative">
           <div class="relative w-full h-[100vh] mt-16 overflow-hidden">
             <!-- MAPA -->
             <div id="map" class="h-[80vh] w-[70vw] items-center justify-center mx-auto mt-10">
