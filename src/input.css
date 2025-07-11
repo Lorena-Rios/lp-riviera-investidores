@@ -1,0 +1,49 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+.ease-in-out {
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.fade-in {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+.visible {
+    opacity: 1 !important;
+}
+body{
+    font-family: 'Rawline', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 20px;
+  }
+  
+
+
+.swiper-slide {
+  position: relative;
+}
+.swiper-button-prev-custom,
+.swiper-button-next-custom {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.text-def{
+   @apply text-base md:text-sm lg:text-lg 2xl:text-xl;
+}
+
+.scroll {
+    background-image: url(./static/images/scroll.gif);
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
