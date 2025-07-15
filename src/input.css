@@ -47,3 +47,55 @@ html {
     background-size: contain;
     background-repeat: no-repeat;
   }
+
+.distance-map {
+  transform: scale(0);
+  display: none;
+  transform-origin: top center;
+}
+
+a{
+  cursor: pointer;
+}
+
+.btn-show-map{
+  cursor: pointer;
+}
+
+.bg-praca_klaus_peters {
+  background-image: url(../images/mapa/praca_klaus_peters.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.bg-entrada_de_pf {
+  background-image: url(../images/mapa/entrada_de_pf.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.bg-trevo{
+  background-image: url(../images/mapa/trevo.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.bg-iberostar {
+  background-image: url(../images/mapa/iberostar.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+ /* #carro-map,
+  #caminhada-map {
+    display: none;
+  } */
+
+
+  .text-white{
+    color: #fff;
+  }
