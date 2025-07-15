@@ -356,7 +356,7 @@ document.querySelectorAll(".form-cadastro").forEach((form) => {
             jsonData["interesse"].toUpperCase() === "BAIXAR BOOK" ||
             jsonData["interesse"].toUpperCase().includes("BOOK")
           ) {
-            window.location.href = `./agradecimento/${queryString}${
+            window.location.href = `./baixar-book/${queryString}${
               queryString ? "&book=sim" : "?book=sim"
             }`;
           } else if (jsonData["interesse"].toUpperCase() === "BAIXE A PLANTA") {

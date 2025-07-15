@@ -35,7 +35,7 @@
     </script>
     <!-- End Google Tag Manager -->
   </head>
-  <body class="h-full w-full m-0 p-0 overflow-hidden"></body>
+  <body class="h-full w-full m-0 p-0 overflow-hidden">
     <!-- Google Tag Manager (noscript) -->
     <noscript
       ><iframe
@@ -47,42 +47,108 @@
     ></noscript>
     <!-- End Google Tag Manager (noscript) -->
 
-      <section class="relative h-screen w-screen overflow-hidden flex items-center justify-center">
-        <!-- Imagem de fundo -->
-        <img
-          src="../static/images/sucess_bg.png"
-          alt="Background Image"
-          class="absolute inset-0 w-full h-full object-cover z-0 pointer-events-none"
-        />
+    <section class="relative h-screen w-screen overflow-hidden flex items-center justify-center">
+      <img
+        src="../static/images/sucess_bg.png"
+        alt="Background Image"
+        class="absolute inset-0 w-full h-full object-cover z-0 pointer-events-none"
+      />
 
-        <!-- Overlay para contraste -->
-        <div class="absolute inset-0 bg-black bg-opacity-20 z-10"></div>
+      <div class="absolute inset-0 bg-black bg-opacity-20 z-10"></div>
 
-        <!-- Conteúdo central -->
-        <div class="relative z-20 text-center px-4 w-full max-w-xl">
-          <h1 class="text-white text-xl md:text-4xl font-semibold mb-4 md:mb-8 uppercase whitespace-normal md:whitespace-nowrap">
-            Cadastro realizado com sucesso
-          </h1>
-          <p class="text-white text-sm md:text-xl mb-8">
-            Segue o book do Riviera Praia do Forte.
-          </p>
-          <div class="flex flex-col sm:flex-row justify-center gap-4 w-full">
-            <a
-              href="#"
-              class="bg-[#996119] text-white w-full sm:w-auto sm:min-w-[200px] px-6 py-3 text-sm md:text-base uppercase hover:bg-[#8C540C]/90 transition text-center"
-            >
-              Baixar Book
-            </a>
-            <a
-              href="../index.html"
-              class="bg-[#996119] text-white w-full sm:w-auto sm:min-w-[200px] px-6 py-3 text-sm md:text-base uppercase hover:bg-[#8C540C]/90 transition text-center"
-            >
-              Voltar
-            </a>
-          </div>
+
+      <div class="relative z-20 text-center px-4 w-full max-w-xl">
+        <h1 class="text-white text-xl md:text-4xl font-semibold mb-4 md:mb-8 uppercase whitespace-normal md:whitespace-nowrap">
+          Cadastro realizado com sucesso
+        </h1>
+        <p class="text-white text-sm md:text-xl mb-8">
+          Segue o book do Riviera Praia do Forte.
+        </p>
+        
+        
+        <div class="flex flex-col sm:flex-row justify-center gap-4 w-full">
+          <a
+            id="download-btn"
+            href="../static/arquivos/Riviera_Praia_do_Forte-Book-Digital.pdf"
+            class="bg-[#996119] text-white w-full sm:w-auto sm:min-w-[200px] px-6 py-3 text-sm md:text-base uppercase hover:bg-[#8C540C]/90 transition text-center"
+            download="Riviera_Praia_do_Forte-Book-Digital.pdf"
+          >
+            Baixar Book
+          </a>
+          <a
+            id="back-btn"
+            href="../index.html"
+            class="bg-[#996119] text-white w-full sm:w-auto sm:min-w-[200px] px-6 py-3 text-sm md:text-base uppercase hover:bg-[#8C540C]/90 transition text-center"
+          >
+            Voltar
+          </a>
         </div>
-      </section>
 
+        <div id="countdown-message" class="text-gray-100 mt-4 hidden text-sm">
+          Estamos baixando seu book em <span id="countdown">5</span> segundos...
+        </div>
+        <div id="fallback-message" class="text-gray-100 mt-4 hidden text-sm">
+          Se o download não iniciou automaticamente, <span class="font-bold">clique no botão "Baixar Book"</span>.
+        </div>
+      </div>
+    </section>
 
-    </body>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+ 
+        const queryParams = window.location.search;
+        
+
+        const backBtn = document.getElementById('back-btn');
+        if (queryParams) {
+          backBtn.href = backBtn.href + queryParams;
+        }
+        
+  
+        const countdownMessage = document.getElementById('countdown-message');
+        const fallbackMessage = document.getElementById('fallback-message');
+        const countdownElement = document.getElementById('countdown');
+        const downloadBtn = document.getElementById('download-btn');
+        
+        let seconds = 5;
+        let downloadTriggered = false;
+        
+        countdownMessage.classList.remove('hidden');
+        
+        const countdownInterval = setInterval(function() {
+          seconds--;
+          countdownElement.textContent = seconds;
+          
+          if (seconds <= 0) {
+            clearInterval(countdownInterval);
+            countdownMessage.textContent = "Iniciando download...";
+
+            setTimeout(() => {
+               countdownMessage.textContent = "Se o download não iniciar, clique no botão 'Baixar Book'.";
+            }, 1000);
+            
+            try {
+              const link = document.createElement('a');
+              link.href = downloadBtn.href;
+              // link.download = downloadBtn.download;
+              link.target = '_blank';
+              document.body.appendChild(link);
+              link.click();
+              document.body.removeChild(link);
+              downloadTriggered = true;
+            } catch (e) {
+              console.error("Erro ao tentar download automático:", e);
+            }
+            
+  
+            setTimeout(() => {
+              if (!downloadTriggered) {
+                fallbackMessage.classList.remove('hidden');
+              }
+            }, 2000);
+          }
+        }, 1000);
+      });
+    </script>
+  </body>
 </html>
