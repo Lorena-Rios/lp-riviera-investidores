@@ -1874,10 +1874,6 @@ a{
     height: 80vh;
   }
 
-  .lg\:h-\[90vh\] {
-    height: 90vh;
-  }
-
   .lg\:h-full {
     height: 100%;
   }
