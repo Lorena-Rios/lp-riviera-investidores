@@ -785,10 +785,6 @@ video {
   display: block;
 }
 
-.inline-block {
-  display: inline-block;
-}
-
 .flex {
   display: flex;
 }
@@ -1874,10 +1870,6 @@ a{
     display: none;
   }
 
-  .lg\:h-\[100vh\] {
-    height: 100vh;
-  }
-
   .lg\:h-\[80vh\] {
     height: 80vh;
   }
@@ -1888,6 +1880,14 @@ a{
 
   .lg\:h-full {
     height: 100%;
+  }
+
+  .lg\:min-h-\[100vh\] {
+    min-height: 100vh;
+  }
+
+  .lg\:min-h-\[90vh\] {
+    min-height: 90vh;
   }
 
   .lg\:w-5\/12 {
