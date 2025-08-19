@@ -1594,6 +1594,10 @@ html {
   scroll-padding-top: 20px;
 }
 
+a{
+  display: block;
+}
+
 .swiper-slide {
   position: relative;
 }
