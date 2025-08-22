@@ -124,7 +124,7 @@
         </section>
 
         <!-- SEÇÃO INVISTA -->
-        <section id="section-invista" class="mt-8 text-stone-700 font-normal lg:min-h-[90vh] overflow-hidden">
+        <section id="section-invista" class="mt-8 text-stone-700 font-normal lg:max-h-[90vh] overflow-hidden">
           <div class="grid lg:grid-cols-9 gap-6 h-full">
 
             <!-- BLOCO DE TEXTO -->
@@ -135,9 +135,14 @@
               data-aos-offset="200"
 
             >
-              <h2 class="text-xl font-normal mb-2 uppercase">invista em um dos últimos condomínios pé na areia <b>EM PRAIA DO FORTE!</b></h2>
-              <p class="mb-4 text-base max-w-prose">São terrenos de 676,5 m² e 1.014 m², em uma das regiões mais valorizadas e desejadas do litoral baiano.
-                <br>Em um mercado onde escassez de terrenos bem localizados dita o ritmo dos preços, tem enorme potencial de valorização.</p>
+              <h2 class="text-xl font-normal mb-2 uppercase">invista em um dos últimos condomínios pé na areia <b>EM PRAIA DO FORTE.</b></h2>
+              <p class="mb-4 text-base max-w-prose">
+                <br>Riviera Praia do Forte. Um condomínio de altíssimo padrão, com terrenos de 676,5 m² e 1.014 m², em uma das regiões mais valorizadas e desejadas do litoral baiano.
+                <br>Um projeto de Alberto Bolzico com lazer sofisticado, incorporado à lagoa e paisagismo exuberante com preservação de espécies nativas.
+                <br>Exclusivos 140 lotes numa área com mais 240 mil m2. </p>
+              <p class="mb-4 text-base max-w-prose"> 
+                Em um mercado onde escassez de terrenos bem localizados dita o ritmo dos preços, tem enorme potencial de valorização.</p>
+
               <button onclick="openModal('BAIXAR BOOK')" class="text-base block no-underline text-stone-700 hover:text-stone-900 bg-green-600 bg-opacity-40 hover:bg-opacity-55  py-2 px-6 text-center mt-8">BAIXAR BOOK</button>
             </div>
 
@@ -178,7 +183,7 @@
         </section>
 
         <!-- SEÇÃO INVESTIMENTO -->
-        <section class="mt-8 text-stone-700 font-normal lg:min-h-[90vh] overflow-hidden">
+        <section class="mt-8 text-stone-700 font-normal lg:max-h-[90vh] overflow-hidden">
           <div class="grid lg:grid-cols-9 gap-6 h-full">
 
             <!-- BLOCO DE TEXTO -->
@@ -207,58 +212,185 @@
         </section>
 
         <!-- SEÇÃO CARROSSEL -->
-        <section class="text-stone-700 font-normal h-auto lg:min-h-[100vh] overflow-x-hidden overflow-y-hidden relative">
-          <div class="relative h-[50vh] lg:h-[80vh] flex items-center justify-center mt-16">
-            <div class="swiper mySwiper relative w-full h-full"
-              data-aos="fade-up"
-              data-aos-delay="100"
-              data-aos-duration="700"
-              data-aos-offset="200"
+        <section
+          class="text-stone-700 font-normal h-auto lg:h-[100vh] overflow-x-hidden overflow-y-hidden relative"
+        >
+            <div
+              class="relative h-[50vh] lg:h-[80vh] flex items-center justify-center mt-16"
+            >
+              <div
+                class="swiper mySwiper relative w-full"
+                data-aos="fade-up"
+                data-aos-delay="100"
+                data-aos-duration="700"
+                data-aos-offset="200"
               >
-
-              <h2 class="text-2xl md:text-3xl lg:text-4xl text-center font-light mb-6 md:mb-10"
+                <h2
+                  class="text-2xl md:text-3xl lg:text-4xl text-center font-light mb-6 md:mb-10"
                   data-aos="fade-up"
                   data-aos-delay="50"
                   data-aos-duration="700"
-                  data-aos-offset="150">
-                ÁREAS COMUNS
-              </h2>
+                  data-aos-offset="150"
+                >
+                  ÁREAS COMUNS
+                </h2>
 
-              <div class="swiper-wrapper">
-                <div class="swiper-slide flex items-end">
-                  <img src="static/images/caroussel/004_Pisc_02_05.jpg" class="w-auto max-w-full h-full object-cover shadow-lg" alt="Piscina 1">
+                <div class="swiper-wrapper h-auto">
+                  <div 
+                  class="swiper-slide flex flex-col items-center justify-end h-auto">
+                    <img src="static/images/caroussel/004_Pisc_02_05.webp" 
+                    class="w-auto object-cover shadow-lg flex-grow" 
+                    alt="Piscina com  raia de 25m" />
+                    <p 
+                    class="font-light mt-2 text-base text-stone-700 px-4 py-2 rounded font-medium md:text-left text-center">Piscina com  raia de 25m</p>
+                  </div>
+                  <div 
+                  class="swiper-slide flex flex-col items-center justify-end">
+                    <img src="static/images/caroussel/!002_Club_Inft_04.png" 
+                    class="w-auto max-w-full object-cover shadow-lg flex-grow" 
+                    alt="Clube infantil"/>
+                    <p 
+                    class="font-light mt-2 text-base text-stone-700 px-4 py-2 rounded font-medium md:text-left text-center">Clube infantil</p>
+                  </div>
+                  <div 
+                  class="swiper-slide flex flex-col items-center justify-end">
+                    <img src="static/images/caroussel/!003_Pisc_01_04.png" 
+                    class="w-auto max-w-full object-cover shadow-lg flex-grow" 
+                    alt="piscina adulto e infantil  com bar e vista pra lagoa" />
+                    <p 
+                    class="font-light mt-2 text-base text-stone-700 px-4 py-2 rounded font-medium md:text-left text-center">Piscina Adulto e Infantil  com bar e vista pra lagoa</p>
+                  </div>
+                  <div 
+                  class="swiper-slide flex flex-col items-center justify-end">
+                    <img src="static/images/caroussel/006_Quad_04.png" 
+                    class="w-auto max-w-full object-cover shadow-lg flex-grow" 
+                    alt="Perspectiva Ilustrativa da Arena de esportes" />
+                    <p 
+                    class="font-light mt-2 text-base text-stone-700 px-4 py-2 rounded font-medium md:text-left text-center">Perspectiva Ilustrativa da Arena de esportes</p>
+                  </div>
+                  <div 
+                  class="swiper-slide flex flex-col items-center justify-end">
+                    <img src="static/images/caroussel/008_Club_Geral_04.png" 
+                    class="w-auto max-w-full object-cover shadow-lg flex-grow" 
+                    alt="Perspectiva ilustrativa do clube Riviera" />
+                    <p 
+                    class="font-light mt-2 text-base text-stone-700 px-4 py-2 rounded font-medium md:text-left text-center">Perspectiva ilustrativa do clube Riviera</p>
+                  </div>
+                  <div 
+                  class="swiper-slide flex flex-col items-center justify-end">
+                    <img src="static/images/caroussel/010_Aces_Praia_03.png" 
+                    class="w-auto max-w-full object-cover shadow-lg flex-grow" 
+                    alt="Perspectiva ilustrativa da Alameda de acesso à praia" />
+                    <p 
+                    class="font-light mt-2 text-base text-stone-700 px-4 py-2 rounded font-medium md:text-left text-center">Perspectiva ilustrativa da Alameda de acesso à praia</p>
+                  </div>
+                  <div 
+                  class="swiper-slide flex flex-col items-center justify-end">
+                    <img src="static/images/caroussel/012_Apoio_Praia_03.png" 
+                    class="w-auto max-w-full object-cover shadow-lg flex-grow" 
+                    alt="Perspectiva Ilustrativa do Apoio à praia" />
+                    <p 
+                    class="font-light mt-2 text-base text-stone-700 px-4 py-2 rounded font-medium md:text-left text-center">Perspectiva Ilustrativa do Apoio à praia</p>
+                  </div>
+                  <div 
+                  class="swiper-slide flex flex-col items-center justify-end">
+                    <img src="static/images/caroussel/013_Pisc_Chur_02.png" 
+                    class="w-auto max-w-full object-cover shadow-lg flex-grow" 
+                    alt="Perspectiva ilustrativa da Piscina com espaço gourmet" />
+                    <p 
+                    class="font-light mt-2 text-base text-stone-700 px-4 py-2 rounded font-medium md:text-left text-center">Perspectiva ilustrativa da Piscina com espaço gourmet</p>
+                  </div>
+                  <div 
+                  class="swiper-slide flex flex-col items-center justify-end">
+                    <img src="static/images/caroussel/015_Esp_dagua_C_02.png" 
+                    class="w-auto max-w-full object-cover shadow-lg flex-grow" 
+                    alt="Vista externa da academia flutuante" />
+                    <p 
+                    class="font-light mt-2 text-base text-stone-700 px-4 py-2 rounded font-medium md:text-left text-center">Vista externa da academia flutuante</p>
+                  </div>
+                  <div 
+                  class="swiper-slide flex flex-col items-center justify-end">
+                    <img src="static/images/caroussel/101_Acad_05.png" 
+                    class="w-auto max-w-full object-cover shadow-lg flex-grow" 
+                    alt="Academia com sensação de flutuar sobre a lagoa" />
+                    <p 
+                    class="font-light mt-2 text-base text-stone-700 px-4 py-2 rounded font-medium md:text-left text-center">Academia com sensação de flutuar sobre a lagoa</p>
+                  </div>
+                  <div 
+                  class="swiper-slide flex flex-col items-center justify-end">
+                    <img src="static/images/caroussel/102_Cowk_04.png" 
+                    class="w-auto max-w-full object-cover shadow-lg flex-grow" 
+                    alt="hangout  e coworking" />
+                    <p 
+                    class="font-light mt-2 text-base text-stone-700 px-4 py-2 rounded font-medium md:text-left text-center">Hangout  e Coworking</p>
+                  </div>
+                  <div 
+                  class="swiper-slide flex flex-col items-center justify-end">
+                    <img src="static/images/caroussel/103_Jogs_05.png" 
+                    class="w-auto max-w-full object-cover shadow-lg flex-grow" 
+                    alt="Perspectiva Ilustrativa do Salão de Jogos" />
+                    <p 
+                    class="font-light mt-2 text-base text-stone-700 px-4 py-2 rounded font-medium md:text-left text-center">Perspectiva Ilustrativa do Salão de Jogos</p>
+                  </div>
+                  <div 
+                  class="swiper-slide flex flex-col items-center justify-end">
+                    <img src="static/images/caroussel/104_Fest_04 (1).png" 
+                    class="w-auto max-w-full object-cover shadow-lg flex-grow" 
+                    alt="Perspectiva ilustrativa do Salão de Festas" />
+                    <p 
+                    class="font-light mt-2 text-base text-stone-700 px-4 py-2 rounded font-medium md:text-left text-center">Perspectiva ilustrativa do Salão de Festas</p>
+                  </div>
                 </div>
-                <div class="swiper-slide flex items-end">
-                  <img src="static/images/caroussel/piscina_adulto.jpg" class="w-auto max-w-full h-full object-cover shadow-lg" alt="Piscina Adulto">
-                </div>
-                <div class="swiper-slide flex items-end">
-                  <img src="static/images/caroussel/clube_infantil.jpg" class="w-auto max-w-full h-full object-cover shadow-lg" alt="Clube Infantil">
-                </div>
-                <div class="swiper-slide flex items-end">
-                  <img src="static/images/caroussel/hangout.jpg" class="w-auto max-w-full h-full object-cover shadow-lg" alt="Hangout">
-                </div>
-                <div class="swiper-slide flex items-end">
-                  <img src="static/images/caroussel/academia.jpg" class="w-auto max-w-full h-full object-cover shadow-lg" alt="Academia">
-                </div>
-              </div>
 
-              <div class="flex justify-center gap-4 absolute bottom-8 left-1/2 -translate-x-1/2 z-50">
-                <button class="swiper-button-prev-custom bg-white bg-opacity-90 rounded-full w-10 h-10 flex items-center justify-center shadow transition hover:bg-stone-600 hover:text-white">
-                  <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 17l-5-5 5-5"/></svg>
+                <div
+                  class="flex justify-center gap-4 absolute bottom-16 left-1/2 -translate-x-1/2 z-50 md:mt-0 mb-4"
+                >
+                <button
+                  class="swiper-button-prev-custom bg-white bg-opacity-90 rounded-full w-8 h-8 md:w-10 md:h-10 flex items-center justify-center shadow transition hover:bg-stone-600 hover:text-white p-0"
+                >
+                  <svg
+                    width="22"
+                    height="22"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    viewBox="0 0 22 22"
+                    style="display: block;"
+                  >
+                    <path d="M14 17l-5-5 5-5" />
+                  </svg>
                 </button>
-                <button class="swiper-button-next-custom bg-white bg-opacity-90 rounded-full w-10 h-10 flex items-center justify-center shadow transition hover:bg-stone-600 hover:text-white">
-                  <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 7l5 5-5 5"/></svg>
+                <button
+                  class="swiper-button-next-custom bg-white bg-opacity-90 rounded-full w-8 h-8 md:w-10 md:h-10 flex items-center justify-center shadow transition hover:bg-stone-600 hover:text-white p-0"
+                >
+                  <svg
+                    width="22"
+                    height="22"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    viewBox="0 0 22 22"
+                    style="display: block;"
+                  >
+                    <path d="M8 7l5 5-5 5" />
+                  </svg>
                 </button>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="relative flex justify-center items-center pb-16"
-                data-aos="fade-up"
-                data-aos-delay="200"
-                data-aos-duration="700"
-                data-aos-offset="-200"
-                >
-            <button onclick="openModal('AGENDAR VISITA')" class="text-base block no-underline text-stone-700 hover:text-stone-900 bg-green-600 bg-opacity-40 hover:bg-opacity-55 py-2 px-6 text-center mt-8">AGENDAR VISITA</button>
+          <div
+            class="relative flex justify-center items-center lg:pb-16 mt-0 md:mt-2 lg:mt-8"
+            data-aos="fade-up"
+            data-aos-delay="200"
+            data-aos-duration="700"
+            data-aos-offset="-200"
+          >
+            <a
+              href="javascript:void(0)"
+              onclick="openModal('AGENDAR VISITA')"
+              class="text-base inline-block no-underline text-stone-700 hover:text-stone-900 bg-green-600 bg-opacity-40 hover:bg-opacity-55 py-2 px-6 text-center mt-4"
+              >AGENDAR VISITA</a
+            >
           </div>
         </section>
 
