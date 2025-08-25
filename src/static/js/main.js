@@ -314,8 +314,7 @@ document.querySelectorAll(".form-cadastro").forEach((form) => {
 
     console.log("Dados do formulário:", jsonData);
 
-    // let url = "https://acheiinterativa.com.br/portal/cadastro/riviera-praia-do-forte/index.php";
-    let url = "https://testerivieira.free.beeceptor.com";
+    let url = "https://acheiinterativa.com.br/portal/cadastro/riviera-praia-do-forte/index.php";
 
     fetch(url, {
       method: "POST",
